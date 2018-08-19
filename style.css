@@ -1,0 +1,252 @@
+*{
+	/* одинаковое отображение всех элементах в разных браузерах*/
+	margin: 0;  /*внутренние отступы */
+	padding: 0; /* внешние отступы */
+ }
+
+ul{
+	list-style: none; /* отменяем маркер для списка */
+ }
+
+a {
+	text-decoration: none; /* отменяем подчеркивание для ссылок */
+	font-weight:bold;
+}
+
+header h1{  /* текст в хедере */
+	float: left;  /* привязка */
+	margin: 30px 0 0  40px;  /* сверху, справа, снизу, слева*/
+}
+
+
+.logotype{
+	float: left;  /* привязка справа*/
+	position: relative;  /* свободная позиция*/
+	right: -190px;  /*сдвиг справа на 10px*/
+	bottom: -70px;  /* сдвиг сверху*/
+}
+
+nav{
+	float: right;  /* привязка */
+	/* clear: right;  /* отмена обтекания - т.е. nav опустится на след строку*/
+}
+
+nav li.topmenu{  /* верхнее меню */
+	font-family:bankgothic lt bt;  /* шрифт */
+	font-size:15px;  /* размер */
+	font-weight: bold;  /* жирный текст */
+	float: right; /* привязка справа */
+	margin: 3px 150px 0 -120px;
+}
+
+nav li a{  /* ссылки в верхнем меню */
+	color: white;
+	text-transform: uppercase;  /* все буквы заглавные */
+	font-weight: bold;  /* жирный текст */
+	padding: 3px 15px;
+}
+
+.headermenu a:before {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 127%;
+  height: 5px;
+  bottom: 0;
+  left: -15px;
+  border-radius: 2px;
+  transform: scaleX(0);
+  -webkit-transform: scale(0);
+  animation: 1s forwards no-hover-v linear;
+  -webkit-animation: 1s forwards no-hover-v linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+.headermenu a:hover:before,
+.headermenu a:focus:before {
+  animation: .5s forwards hover-v linear;
+  -webkit-animation: .5s forwards hover-v linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      -webkit-transform: scale(0);
+      height: 5px;
+     }
+  45% {   
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 5px;
+     }
+  55% {height: 5px;}
+  100% {
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 25px;
+     }
+}
+@-webkit-keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      -webkit-transform: scale(0);
+      height: 5px;
+     }
+  45% {   
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 5px;
+     }
+  55% {height: 5px;}
+  100% {
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 25px;
+     }
+}
+
+@keyframes no-hover-v {
+  0% {
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 25px;
+     }
+  45% {height: 5px;}
+  55% {   
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 5px;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 5px;
+      opacity: .02;
+     }
+}
+@-webkit-keyframes no-hover-v {
+  0% {
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 25px;
+     }
+  45% {height: 5px;}
+  55% {   
+      transform: scaleX(1);
+      -webkit-transform: scale(1);
+      height: 5px;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 5px;
+      opacity: .02;
+     }
+}
+
+.buynow{  /* BUY NOW */
+	position:absolute;
+	top:500px;
+	left: 998px;
+	width: 220px;
+	height: 60px;
+	color: white;
+	font-family:bankgothic lt bt;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	background: -moz-linear-gradient(top, #ff153d 0%, #ff153d 50%, #ff153d 51%, #ff153d 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff153d), color-stop(50%,#ff153d), color-stop(51%,#ff153d), color-stop(100%,#ff153d)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff153d', endColorstr='#ff153d',GradientType=0 ); /* ie */ 
+	display: inline-block;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.buynow:hover {
+	transition:1s all;
+  	background: none;
+	color: black; 	
+}
+
+
+/* ТЕКСТ В ОСНОВНОМ БЛОКЕ (СЛАЙДЕР) */
+
+.slidetext h1{ 
+	position:absolute;
+	text-align:center;
+	top: 270px;
+	padding-left: 1000px;
+	font-size: 50px;
+	color: black;	
+}
+
+.slidetext h2{ 
+	text-align:left;
+	padding-top: 150px;
+	padding-left: 1000px;
+	font-size: 17px;
+}
+
+.slidetext h3{
+	text-align:left;
+	padding-left: 1000px;
+	font-size: 17px;
+}
+ 
+.slidetext h4{ 
+	text-align:left;
+	padding-left: 1000px;
+	font-size: 17px;
+}
+
+.slidetext{  
+	position:absolute;
+	text-align:center;
+	top: 0;
+	padding-top: 200px;	
+	font-weight: bold;
+	color: #534b4c;
+}
+
+.Rectangle-11{ 
+	position:absolute;
+	top: 170px;
+	left: 175px;
+}
+
+.Rectangle-2{ 
+	position:absolute;
+	top: 200px;
+	left: 175px;
+	opacity: 0.4;
+}
+
+.arrowright{ 
+	position:absolute;
+	top: 450px;
+	left: 1685px;
+	opacity: 0.5;
+}
+
+.arrowleft{ 
+	position:absolute;
+	top: 450px;
+	left: 175px;
+	opacity: 0.5;
+}
+
+
